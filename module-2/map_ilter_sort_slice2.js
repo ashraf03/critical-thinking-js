@@ -112,14 +112,43 @@ const rawApiData = [
 
 // console.log(topElectronicProducts);
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
-const eventNumber = numbers.filter((number) => number % 2 == 0)
+// const eventNumber = numbers.filter((number) => number % 2 == 0)
 
-console.log(eventNumber);
+// console.log(eventNumber);
+
+// const users = [
+//   { name: "Ashraf", active: true },
+//   { name: "Rahim", active: false },
+//   { name: "Karim", active: true }
+// ];
+
+// const usersActive = users.filter((user) => user.active)
+
+// console.log(usersActive);
+
+// numbers.filter(a => {
+//   a > 2//Worng 
+// })
+
+// const admins = ['ashraf', 'name', 'ds', 'ashraf']
+
+// const adminsAll = admins.filter(ad => ad == "ashraf")
+
+// console.log(adminsAll)
 
 
 
+const topElectronicProducts = rawApiData.filter(
+  (item) => item.category === 'Electronics'
+)
+.sort((a, b) => a.rating - b.rating)
+.slice(0, 3)
+.map((item) => {
+  return {name: item.productName}
+})
 
 
+console.log(topElectronicProducts);
 
